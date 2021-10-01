@@ -115,7 +115,7 @@ Example
      $PayClass->nameCostumer = "xxxxxxx";
      $PayClass->phoneCostumer = "xxxxxxx";
      $PayClass->method =getWays::zaincash; // "getWays::zaincash" or "getWays::aps"   or "getWays::amwal"
-      $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url)
+     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url)
 ```
 Example Switch MasterCard
 ---------
