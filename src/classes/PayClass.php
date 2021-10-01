@@ -11,6 +11,14 @@ use AmwalClass;
 use SwitchClass;
 use ZainCashIQ\ZainCash;
 use TasdidClass;
+abstract class getWays
+{
+    const zaincash = "zaincash";
+    const aps = "aps";
+    const amwal = "amwal";
+    const tasdid = "tasdid";
+    const switch = "switch";
+}
 class PayClass 
 {
     public float $amount;
@@ -23,6 +31,13 @@ class PayClass
     public string $nameCostumer;
     public string $phoneCostumer;
     public  string $orderNum;
+
+
+    public string $cardNumber;
+    public string  $cardHolder;
+    public string  $Mounth;
+    public string  $Year;
+    public string  $Cvv;
     public function __construct()
     {
     }
@@ -91,9 +106,9 @@ return $this->PaySwitch();
     }
 
 
-    public function PaySwitch($amount, $cardNumber, $cardHolder, $currency, $Mounth, $Year, $Cvv){
+    public function PaySwitch(){
         $SwitchClass=new SwitchClass();
-        $ret=$SwitchClass->getPay( $amount, $cardNumber, $cardHolder, $currency, $Mounth, $Year, $Cvv);
+        $ret=$SwitchClass->getPay( $this->amount, $this->cardNumber, $this->cardHolder, $this->currency,$this->Mounth, $this->Year, $this->Cvv);
         return $ret;
     }
 
