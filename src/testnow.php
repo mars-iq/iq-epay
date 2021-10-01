@@ -1,31 +1,50 @@
 <?php
 include('classes/PayClass.php');
 use iqpay\PayClass;//f
+use iqpay\getWays;
 if (isset($_POST['submit'])) {
-    $amount = "10000";
-    $currency = "840";
-    $returnUrl = "https://localhost";
-    $failUrl = "https://localhost";
-    $language = "ar";
-    $description = "for test";
-    $ordernum = rand(10000, 99999);
-    $nameCostumer = "mohammed akeel";
-    $phoneCostumer = "07709312173";
-    $method = $_POST['methodpay'];
-    $PayClass = new PayClass();
-    $PayClass->setData($nameCostumer, $phoneCostumer, $amount, $ordernum, $currency, $returnUrl, $failUrl, $language, $description, $method);
-  
-  if( $_POST['methodpay']=="switch"){
-    $PayClass->method="swtich";
-    $amount="90";
-    $cardNumber="5454545454545454";
-    $cardHolder="Jane Jones";
-    $currency="USD";
-    $Mounth="05";
-    $Year="2034";
-    $Cvv="123";
 
-    $response=$PayClass->PaySwitch($amount, $cardNumber, $cardHolder, $currency, $Mounth, $Year, $Cvv);
+  
+    $PayClass = new PayClass();
+    $PayClass->amount = "10000";
+    $PayClass->currency = "IQD";// or USD
+    $PayClass->returnUrl = "http://example.com";
+    $PayClass->failUrl = "http://example.com";
+    $PayClass->language = "ar";// or "en"
+    $PayClass->description = "xxxxxxx";
+    $PayClass->ordernum = "xxxxxxx";
+    $PayClass->nameCostumer = "xxxxxxx";
+    $PayClass->phoneCostumer = "xxxxxxx";
+   
+   if($_POST['methodpay']=="zaincash"){
+    $PayClass->method = getWays::zaincash;
+   }
+    if($_POST['methodpay']=="aps"){
+      $PayClass->method = getWays::aps;
+     }
+     if($_POST['methodpay']=="switch"){
+      $PayClass->method = getWays::switch;
+     }
+     if($_POST['methodpay']=="amwal"){
+      $PayClass->method = getWays::amwal;
+     }
+     if($_POST['methodpay']=="tasdid"){
+      $PayClass->method = getWays::tasdid;
+     }
+   
+ 
+
+  if( $_POST['methodpay']=="switch"){
+    $PayClass->method=getWays::switch;
+    $PayClass->amount="90";
+    $PayClass->cardNumber="xxxxxxxxxxxxxxx";
+    $PayClass->cardHolder="xxxxxxxxxxxxxxx";
+    $PayClass->currency="IQD"; // or USD
+    $PayClass->Mounth="xxx";
+    $PayClass->Year="xxx";
+    $PayClass->Cvv="xxx";
+
+    $response=$PayClass->PaySwitch();
   }else{
     $response=$PayClass->Pay();
   }
