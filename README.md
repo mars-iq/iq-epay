@@ -11,12 +11,13 @@ Target:
 Providing a special package to solve these problems by creating a single object and calling a unit function with its parameters to create the payment process across all or separately gates
 
 Payment Gates:
+```bash
 1-APS (Validated)
 2-Amwal (Validated)
 3-ZainCash (Validated)
 4-Switch (Validated)
 5-Tasdid (Beta)
-
+```
 Solution:
 ------
 Building a set of problem-solving objects where these objects work in conjunction to accomplish the task of payment through a particular gateway
@@ -121,15 +122,15 @@ Example Check Procces Success(APS)
 
 Classes
 -----
-
-   PayClass    Payment interfaces interconnection
-   MainClass   Configuration Payments Gate	
-   ApsClass    Aps Payment Gate
+```bash
+   PayClass     Payment interfaces interconnection 
+   MainClass    Configuration Payments Gate	 
+   ApsClass     Aps Payment Gate 
    AmwalClass 	Amwal Payment Gate	
-   ZainCash	ZainCash Payment Gate		
-  SwitchClass	Switch Payment Gate		
-  TasdidClass	Tasdid Payment Gate		
-  
+   ZainCash	    ZainCash Payment Gate		
+   SwitchClass	Switch Payment Gate	
+   TasdidClass	Tasdid Payment Gate		
+  ```
   
 
 
