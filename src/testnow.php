@@ -1,6 +1,6 @@
 <?php
 include('classes/PayClass.php');
-use Mars\PayClass;//f
+use iq-epay\PayClass;//f
 if (isset($_POST['submit'])) {
     $amount = "10000";
     $currency = "840";
