@@ -1,7 +1,7 @@
 {
     "name": "mars-iq/iqpay",
     "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class ",
-
+    "type": "project",
     "repositories": [
         {
               "packagist": false,
