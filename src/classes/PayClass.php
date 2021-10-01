@@ -1,5 +1,5 @@
 <?php
-namespace iq-epay;
+namespace iqpay;
 require_once('main.php');
 require_once('ApsClass.php');
 require_once('AmwalClass.php');
