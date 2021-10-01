@@ -1,39 +1,16 @@
 {
-    "name": "mars-iq/iqpay",
-    "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class ",
-
-    "repositories": [
-        {
-              "packagist": false,
-            "type": "vcs",
-            "url": "https://github.com/mars-iq/iq-epay.git"
-        }
-
-    ],
-    "keywords": ["e-payment", "zaincash", "aps", "amwal", "switch"],
-    "homepage": "https://github.com/mars-iq/iq-epay",
-    "authors": [{
-        "name": "mars team",
-        "email": "mo.marsiq@gmail.com"
-    }],
-    "require": {
-        "guzzlehttp/guzzle": "7.0",
-        "php": ">=5.5",
-        "firebase/php-jwt": "^5.4"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*",
-        "mockery/mockery": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Mars\\PayClass\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Mars\\PayClass\\": "src/"
-        }
+  "name": "mars-iq/random-password",
+  "description": "Generate random password of a given length",
+  "type": "library",
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Azraar Azward",
+      "email": "mazraara@gmail.com"
     }
-
+  ],
+  "minimum-stability": "dev"
 }
