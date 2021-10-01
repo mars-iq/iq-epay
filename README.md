@@ -106,7 +106,7 @@ Example
   
      $PayClass = new PayClass();
      $PayClass->amount = "10000";
-     $PayClass->currency = "840";
+     $PayClass->currency = "IQD";// or USD
      $PayClass->returnUrl = "http://example.com";
      $PayClass->failUrl = "http://example.com";
      $PayClass->language = "ar";// or "en"
@@ -127,7 +127,7 @@ Example Switch MasterCard
     $PayClass->amount="90";
     $PayClass->cardNumber="xxxxxxxxxxxxxxx";
     $PayClass->cardHolder="xxxxxxxxxxxxxxx";
-    $PayClass->currency="xxx";
+    $PayClass->currency="IQD"; // or USD
     $PayClass->Mounth="xxx";
     $PayClass->Year="xxx";
     $PayClass->Cvv="xxx";
