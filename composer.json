@@ -2,14 +2,9 @@
     "name": "mars-iq/iqpay",
     "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class ",
     "type": "project",
-    "repositories": [
-        {
-              "packagist": false,
-            "type": "vcs",
-            "url": "git@github.com/mars-iq/iq-epay.git"
-        }
-
-    ],
+        "minimum-stability": "dev",
+    "prefer-stable": true
+ ,
     "keywords": ["e-payment", "zaincash", "aps", "amwal", "switch"],
     "homepage": "https://github.com/mars-iq/iq-epay",
     "authors": [{
@@ -21,21 +16,13 @@
         "php": ">=5.5",
         "firebase/php-jwt": "^5.4"
     },
-    "require-dev": {
-        "phpunit/phpunit": "*",
-        "mockery/mockery": "*"
-    },
+
     "autoload": {
         "psr-4": {
             "mars-iq\\PayClass\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "mars-iq\\PayClass\\": "src/"
-        }
-    },
-        "minimum-stability": "dev",
-    "prefer-stable": true
+
+    
 
 }
