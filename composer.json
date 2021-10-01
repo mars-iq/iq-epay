@@ -1,5 +1,5 @@
 {
-    "name": "iq-epay",
+    "name": "iqepay",
     "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class ",
     "type": "library",
     "license": "proprietary",
