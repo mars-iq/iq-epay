@@ -11,7 +11,7 @@
 
 MarTeam/iq-epay:
 -----
-This peace of code was written using hackathon yanhad, and it now under testing level
+This peace of code was written using hackathon yanhad, and it is now under testing level
 
 Document:
 -----
