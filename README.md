@@ -29,6 +29,47 @@ Use composer to manage your dependencies and download mars-iq/iqpay:
 ```bash
     composer require mars-iq/iqpay:dev-master
 ```
+Installation Config File
+-------------
+now you should add config.json file in your root of project like this (All this Configs It is provided to you by the source)
+```json
+{
+    "aps": {
+        "username": "xxxxxxxxxx",
+        "password": "xxxxxxxxxx",
+        "urlapi": "http://api.example.com",
+        "redirect": true
+    },
+    "zaincash": {
+        "Msisdn": "xxxxxxxxxx",
+        "Merchant_Id": "xxxxxxxxxx",
+        "Secret": "xxxxxxxxxx",
+        "production_cred": false
+    },
+    "switch": {
+        "tokenSwitch": "xxxxxxxxxx",
+        "entityId": "xxxxxxxxxx",
+        "urlapi": "http://api.example.com"
+
+    },
+    "tasdid": {
+        "username": "xxxxxxxxxx",
+        "password": "xxxxxxxxxx",
+        "serviceId": "xxxxxxxxxx",
+        "urlapi": "http://api.example.com"
+
+    },
+    "amwal": {
+        "serverkey": "xxxxxxxxxx",
+        "profileid": "xxxxxxxxxx",
+        "urlapi": "http://api.example.com"
+
+    }
+
+}
+
+```
+
 
 Using Object
 ----------
@@ -75,6 +116,20 @@ Example Check Procces Success(APS)
    $orderId = "xxxxxxxxxxxxxxxxxxxx";
    $PayClass = new PayClass();
    $PayClass->method = "aps";
-   $res = $PayClass->checkOrder($orderId);
+   $res = $PayClass->checkOrder($orderId); // return -1 not suported or 1 succes or 0 error
 ```
+
+Classes
+-----
+
+   PayClass    Payment interfaces interconnection
+   MainClass   Configuration Payments Gate	
+   ApsClass    Aps Payment Gate
+   AmwalClass 	Amwal Payment Gate	
+   ZainCash	ZainCash Payment Gate		
+  SwitchClass	Switch Payment Gate		
+  TasdidClass	Tasdid Payment Gate		
+  
+  
+
 
