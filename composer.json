@@ -27,13 +27,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Mars\\PayClass\\": "src/"
+            "mars-iq\\PayClass\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mars\\PayClass\\": "src/"
+            "mars-iq\\PayClass\\": "src/"
         }
-    }
+    },
+        "minimum-stability": "dev",
+    "prefer-stable": true
 
 }
