@@ -48,7 +48,7 @@ Installation
 Use composer to manage your dependencies and download mars-iq/iqpay (Work Just Composer Version 2):
 
 ```bash
-    composer require mars-iq/iqpay:dev-master 
+composer require mars-iq/iqpay:dev-master 
     
 ```
 Installation Config File
