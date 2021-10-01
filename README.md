@@ -115,7 +115,9 @@ Example
      $PayClass->nameCostumer = "xxxxxxx";
      $PayClass->phoneCostumer = "xxxxxxx";
      $PayClass->method =getWays::zaincash; // "getWays::zaincash" or "getWays::aps"   or "getWays::amwal"
-     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url)
+     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url) or 0 if have erorr
+     //array(transiction_id,url)  url use for redirect to the payment getway examlpe: header('location: http://paygate.com')
+     //transiction_id to save in your database
 ```
 Example Switch MasterCard
 ---------
@@ -130,7 +132,8 @@ Example Switch MasterCard
     $PayClass->Year="xxx";
     $PayClass->Cvv="xxx";
 
-    $response=$PayClass->PaySwitch();//to procces Pay  - response (transiction_id,url)
+    $response=$PayClass->PaySwitch();//to procces Pay  - response (transiction_id) or 0 if have erorr
+    //transiction_id to save in your database
 ```
 Example Check Procces Success(APS)
 ---------
@@ -138,7 +141,7 @@ Example Check Procces Success(APS)
    $orderId = "xxxxxxxxxxxxxxxxxxxx";
    $PayClass = new PayClass();
    $PayClass->method = "aps";
-   $res = $PayClass->checkOrder($orderId); // return -1 not suported or 1 succes or 0 error
+   $res = $PayClass->checkOrder($orderId); // return -1 not supported or 1 succes or 0 error
 ```
 
 Classes
