@@ -1,10 +1,10 @@
 
 <div>
-<img src="https://mohammedakeel.online/logos/mars.png" width="75">
+    <img src="https://mohammedakeel.online/logos/mars.png" width="75">
     <img src="https://mohammedakeel.online/logos/yanhad.png" width="75">
     <img src="https://mohammedakeel.online/logos/station.jpg" width="75">
-<img src="https://mohammedakeel.online/logos/amwal.jpg" width="75">
-<img src="https://mohammedakeel.online/logos/zaincash.png" width="75">
+    <img src="https://mohammedakeel.online/logos/amwal.jpg" width="75">
+    <img src="https://mohammedakeel.online/logos/zaincash.png" width="75">
     <img src="https://mohammedakeel.online/logos/aps.png" width="75">
     <img src="https://mohammedakeel.online/logos/switch.jpg" width="75">
 </div>
@@ -45,10 +45,11 @@ Building a set of problem-solving objects where these objects work in conjunctio
 Installation
 ------------
 
-Use composer to manage your dependencies and download mars-iq/iqpay:
+Use composer to manage your dependencies and download mars-iq/iqpay (Work Just Composer Version 2):
 
 ```bash
-    composer require mars-iq/iqpay:dev-master
+    composer require mars-iq/iqpay:dev-master 
+    
 ```
 Installation Config File
 -------------
