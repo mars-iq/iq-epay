@@ -2,8 +2,7 @@
     "name": "mars-iq/iqpay",
     "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class ",
     "type": "library",
-    "license": "proprietary",
-   "minimum-stability": "dev",
+
 
     "keywords": ["e-payment", "zaincash", "aps", "amwal", "switch"],
     "homepage": "https://github.com/mars-iq/iq-epay",
