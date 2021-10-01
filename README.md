@@ -24,7 +24,7 @@ PHP OOP , Curl,Php HttpClint,JWT
 
 Problem:
 ------
-Many projects that need e-payment through their applications have some problems in e-payment, including the multiplicity of payment gates, which makes it difficult to program these gates due to the multiplicity of documents, links and methods of work
+Most of the applications today come with e-payment tools, where many challenges occur in terms of coding. On top of them, the variety of payment gateways which might be difficult to be implemented in the context of coding, and this is due to the multiplicity of documents, links, and work behavior
 
 Target:
 -----
