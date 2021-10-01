@@ -1,0 +1,34 @@
+{
+    "aps": {
+        "username": "api_thestation",
+        "password": "8WifwVjaV71J432z8B5j",
+        "urlapi": "https://uat-proxy.aps.iq:5443",
+        "redirect": true
+    },
+    "zaincash": {
+        "Msisdn": "9647835077893",
+        "Merchant_Id": "5ffacf6612b5777c6d44266f",
+        "Secret": "$2y$10$hBbAZo2GfSSvyqAyV2SaqOfYewgYpfR1O19gIh4SqyGWdmySZYPuS",
+        "production_cred": false
+    },
+    "switch": {
+        "tokenSwitch": "Bearer OGE4Mjk0MTc0ZDA1OTViYjAxNGQwNWQ4MjllNzAxZDF8OVRuSlBjMm45aA==",
+        "entityId": "8a8294174d0595bb014d05d82e5b01d2",
+        "urlapi": "https://test.oppwa.com"
+
+    },
+    "tasdid": {
+        "username": "test",
+        "password": "test",
+        "serviceId": "test",
+        "urlapi": "https://api.tasdid.net"
+
+    },
+    "amwal": {
+        "serverkey": "S6JNZGMDTJ-J2H6HKBBTH-J66M6N9L9G",
+        "profileid": "79905",
+        "urlapi": "https://secure-iraq.paytabs.com"
+
+    }
+
+}
