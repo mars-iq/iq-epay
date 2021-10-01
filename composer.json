@@ -8,7 +8,7 @@
         "email": "mo.marsiq@gmail.com"
     }],
     "require": {
-        "guzzlehttp/guzzle": "*",
+        "guzzlehttp/guzzle": "7.0",
         "firebase/php-jwt": "^5.4"
     },
     "autoload": {
