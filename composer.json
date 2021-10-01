@@ -6,7 +6,7 @@
         {
               "packagist": false,
             "type": "vcs",
-            "url": "https://github.com/mars-iq/iq-epay.git"
+            "url": "git@github.com/mars-iq/iq-epay.git"
         }
 
     ],
