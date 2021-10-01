@@ -1,6 +1,6 @@
 <?php
 include('classes/PayClass.php');
-use Mars\PayClass;
+use Mars\PayClass;//f
 if (isset($_POST['submit'])) {
     $amount = "10000";
     $currency = "840";
