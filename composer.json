@@ -12,7 +12,7 @@
         "email": "mo.marsiq@gmail.com"
     }],
     "require": {
-        "guzzlehttp/guzzle": "*",
+        "guzzlehttp/guzzle": "7.0",
         "php": ">=5.5",
         "firebase/php-jwt": "^5.4"
     },
