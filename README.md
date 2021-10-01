@@ -28,7 +28,7 @@ Most of the applications today come with e-payment tools, where many challenges 
 
 Target:
 -----
-Providing a special package to solve these problems by creating a single object and calling a unit function with its parameters to create the payment process across all or separately gates
+To provide a particular package aiming to overcome the challenges of e-payment, throughout building a single object and then call a unit function along with its parameters in order to achieve a payment process all over the gates
 
 Payment Gates:
 ```bash
@@ -40,7 +40,7 @@ Payment Gates:
 ```
 Solution:
 ------
-Building a set of problem-solving objects where these objects work in conjunction to accomplish the task of payment through a particular gateway
+Building a set of problem-solving objects that work together to implemented e-payment task in each particular gateway successfully
 
 Installation
 ------------
@@ -97,6 +97,7 @@ Using Object
 ----------
 ```php
       use \iqpay\PayClass;
+      use iqpay\getWays;
  ```
 Example
 ---------
@@ -104,33 +105,32 @@ Example
 
   
      $PayClass = new PayClass();
-     $amount = "10000";
-     $currency = "840";
-     $returnUrl = "http://example.com";
-     $failUrl = "http://example.com";
-     $language = "ar";// or "en"
-     $description = "xxxxxxx";
-     $ordernum = "xxxxxxx";
-     $nameCostumer = "xxxxxxx";
-     $phoneCostumer = "xxxxxxx";
-     $method = "xxxxxxx"; // "zaincash" or "aps"   or "amwal"
-     $PayClass->setData($nameCostumer, $phoneCostumer, $amount, $ordernum, $currency, $returnUrl, $failUrl, $language, $description, $method);//for set data to object
-     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url)
+     $PayClass->amount = "10000";
+     $PayClass->currency = "840";
+     $PayClass->returnUrl = "http://example.com";
+     $PayClass->failUrl = "http://example.com";
+     $PayClass->language = "ar";// or "en"
+     $PayClass->description = "xxxxxxx";
+     $PayClass->ordernum = "xxxxxxx";
+     $PayClass->nameCostumer = "xxxxxxx";
+     $PayClass->phoneCostumer = "xxxxxxx";
+     $PayClass->method =getWays::zaincash; // "getWays::zaincash" or "getWays::aps"   or "getWays::amwal"
+      $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url)
 ```
 Example Switch MasterCard
 ---------
 ```php
     $PayClass = new PayClass();
-    $PayClass->method="swtich";
-    $amount="90";
-    $cardNumber="xxxxxxxxxxxxxxx";
-    $cardHolder="xxxxxxxxxxxxxxx";
-    $currency="xxx";
-    $Mounth="xxx";
-    $Year="xxx";
-    $Cvv="xxx";
+    $PayClass->method=getWays::switch;
+    $PayClass->amount="90";
+    $PayClass->cardNumber="xxxxxxxxxxxxxxx";
+    $PayClass->cardHolder="xxxxxxxxxxxxxxx";
+    $PayClass->currency="xxx";
+    $PayClass->Mounth="xxx";
+    $PayClass->Year="xxx";
+    $PayClass->Cvv="xxx";
 
-    $response=$PayClass->PaySwitch($amount, $cardNumber, $cardHolder, $currency, $Mounth, $Year, $Cvv);
+    $response=$PayClass->PaySwitch();//to procces Pay  - response (transiction_id,url)
 ```
 Example Check Procces Success(APS)
 ---------
