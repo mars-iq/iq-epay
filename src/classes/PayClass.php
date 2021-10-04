@@ -143,9 +143,10 @@ class PayClass
     }
 
 
-    function QiVoidOrder(String $orderNum, string $transiction_id){
+    function QiVoidOrder(String $orderNum, string $transiction_id)
+    {
         $QiClass = new QiClass();
-$ret=$QiClass->VoidOrder($orderNum,$transiction_id);
-         return $ret;
+        $ret = $QiClass->VoidOrder($orderNum, $transiction_id);
+        return $ret;
     }
 }
