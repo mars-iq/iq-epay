@@ -3,7 +3,7 @@
     <img src="https://mohammedakeel.online/logos/mars.png" width="75">
     <img src="https://mohammedakeel.online/logos/yanhad.png" width="75">
     <img src="https://mohammedakeel.online/logos/station.jpg" width="75">
-        <img src="https://mohammedakeel.online/logos/qi.png" width="75">
+    <img src="https://mohammedakeel.online/logos/qi.png" width="75">
     <img src="https://mohammedakeel.online/logos/amwal.jpg" width="75">
     <img src="https://mohammedakeel.online/logos/zaincash.png" width="75">
     <img src="https://mohammedakeel.online/logos/aps.png" width="75">
@@ -96,7 +96,7 @@ Using Object
 ----------
 ```php
       use \iqpay\PayClass;
-      use iqpay\getWays;
+      use \iqpay\getWays;
  ```
 Example
 ---------
@@ -113,8 +113,8 @@ Example
      $PayClass->ordernum = "xxxxxxx";
      $PayClass->nameCostumer = "xxxxxxx";
      $PayClass->phoneCostumer = "xxxxxxx";
-     $PayClass->method =getWays::zaincash; // "getWays::zaincash" or "getWays::aps"   or "getWays::amwal"
-     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url) or 0 if have erorr
+     $PayClass->method =getWays::qi; //  or "getWays::qi" or "getWays::zaincash" or "getWays::aps"   or "getWays::amwal"
+     $response=$PayClass->Pay();//to procces Pay  - response (transiction_id,url) status=>1 is succes or status=> 0 if have erorr and response=>xxxx
      //array(transiction_id,url)  url use for redirect to the payment getway examlpe: header('location: http://paygate.com')
      //transiction_id to save in your database
 ```
@@ -131,16 +131,16 @@ Example Switch MasterCard
     $PayClass->Year="xxx";
     $PayClass->Cvv="xxx";
 
-    $response=$PayClass->PaySwitch();//to procces Pay  - response (transiction_id) or 0 if have erorr
+    $response=$PayClass->PaySwitch();//to procces Pay  - response (transiction_id) and status=>1 success or status=>0 if have erorr
     //transiction_id to save in your database
 ```
-Example Check Procces Success(APS)
+Example Check Procces Success(APS,QiCard)
 ---------
 ```php
    $orderId = "xxxxxxxxxxxxxxxxxxxx";
    $PayClass = new PayClass();
-   $PayClass->method = "aps";
-   $res = $PayClass->checkOrder($orderId); // return -1 not supported or 1 succes or 0 error
+   $PayClass->method = getWays::aps;// or getWays::qi
+   $res = $PayClass->checkOrder($orderId,$transiction_id); // return -1 not supported  or 'status'=> 1 succes or 'status'=> 2 error and response
 ```
 
 Classes
@@ -149,6 +149,7 @@ Classes
    PayClass     Payment interfaces interconnection 
    MainClass    Configuration Payments Gate	 
    ApsClass     Aps Payment Gate 
+   QiClass     QiCard Payment Gate 
    AmwalClass 	Amwal Payment Gate	
    ZainCash	    ZainCash Payment Gate		
    SwitchClass	Switch Payment Gate	
