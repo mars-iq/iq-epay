@@ -14,7 +14,7 @@ class QiClass extends MainClass
 
         // call Grandpa's constructor
         parent::__construct("qi");
-        $this->client = new Client(['base_uri' => $this->urlapi]);
+        $this->client = new Client(['base_uri' => $this->urlapi,'http_errors' => false]);
     }
 
     function getPay($amount, $currency, $orderNum, $returnUrl, $failUrl)
@@ -56,6 +56,35 @@ class QiClass extends MainClass
     {
 
         $response = $this->client->request('GET', $this->urlapi . "/api/v0/transactions/business/" . $transiction_id . "/" . $ordernumber, [
+            'headers' => [
+                'Authorization' => $this->serverkey,
+                'Content-type'     => 'application/json',
+
+            ]
+        ]);
+        $json_response = json_decode($response->getBody(), true);
+
+        if (isset($json_response['success'])) {
+            if ($json_response['success']) {
+                return array('status' => 1, 'response' => $json_response);
+            } else {
+                return array('status' => 2, 'response' => $json_response);
+            }
+        }
+
+        return 0;
+    }
+
+    function VoidOrder(string $ordernumber, string $transiction_id)
+    {
+        $body = json_encode([
+
+            "orderId" => $ordernumber,
+            "transactionId" => $transiction_id,
+       
+        ]);
+        $response = $this->client->request('POST', $this->urlapi . "/api/v0/transactions/business/void", [
+            'body'=>$body,
             'headers' => [
                 'Authorization' => $this->serverkey,
                 'Content-type'     => 'application/json',
