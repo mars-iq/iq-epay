@@ -31,7 +31,7 @@ To provide a particular package aiming to overcome the challenges of e-payment, 
 Payment Gates:
 ```bash
 1-APS (Validated)
-2-Qi (Validated)
+2-QiCard (Validated)
 3-Amwal (Validated)
 4-ZainCash (Validated)
 5-Switch (Validated)
