@@ -185,10 +185,10 @@ class ZainCash extends MainClass
 
     //handles http response and return redirection url
     $redirect_url = $this->handleHttpResponse($http_response);
-echo $http_response."dd";
-$json_data=json_decode($http_response,true);
- 
-    return array('url'=>$redirect_url,'transiction_id'=>$json_data['id']);
+
+    $json_data = json_decode($http_response, true);
+
+    return array('status' => true, 'url' => $redirect_url, 'transiction_id' => $json_data['id'], 'response' => $json_data);
   }
 
   /**
@@ -303,5 +303,4 @@ $json_data=json_decode($http_response,true);
    * Redirects to the api callback url
    * @param string $url
    */
-
 }
