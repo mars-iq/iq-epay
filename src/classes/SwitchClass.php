@@ -13,7 +13,7 @@ class SwitchClass extends MainClass
         $this->sessionTimeoutSecs = "5000";
         // call Grandpa's constructor
         parent::__construct("switch");
-        $this->client = new Client(['base_uri' => $this->urlapi]);
+              $this->client = new Client(['base_uri' => $this->urlapi,'http_errors' => false]);
     }
 
 
