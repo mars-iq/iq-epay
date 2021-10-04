@@ -32,7 +32,7 @@ Payment Gates:
 ```bash
 1-APS (Validated)
 2-QiCard (Validated)
-3-Amwal (Validated)
+3-Amwal(PayTabs) (Validated)
 4-ZainCash (Validated)
 5-Switch (Validated)
 6-Tasdid (Beta)
@@ -164,7 +164,7 @@ Classes
    MainClass    Configuration Payments Gate	 
    ApsClass     Aps Payment Gate 
    QiClass     QiCard Payment Gate 
-   AmwalClass 	Amwal Payment Gate	
+   AmwalClass 	Amwal(PayTabs) Payment Gate	
    ZainCash	    ZainCash Payment Gate		
    SwitchClass	Switch Payment Gate	
    TasdidClass	Tasdid Payment Gate		
