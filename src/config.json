@@ -5,6 +5,10 @@
         "urlapi": "http://api.example.com",
         "redirect": true
     },
+    "qi": {
+         "serverkey": "xxxxxxxxxx",
+         "urlapi": "http://api.example.com"
+    },
     "zaincash": {
         "Msisdn": "xxxxxxxxxx",
         "Merchant_Id": "xxxxxxxxxx",
