@@ -141,4 +141,11 @@ class PayClass
             return -1;
         }
     }
+
+
+    function QiVoidOrder(String $orderNum, string $transiction_id){
+        $QiClass = new QiClass();
+$ret=$QiClass->VoidOrder($orderNum,$transiction_id);
+         return $ret;
+    }
 }
