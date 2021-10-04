@@ -61,6 +61,11 @@ now you should add config.json file in your root of project like this (All this 
         "urlapi": "http://api.example.com",
         "redirect": true
     },
+    "qi": {
+      
+        "serverkey": "xxxxxxxxxx"
+          "urlapi": "http://api.example.com",
+    },
     "zaincash": {
         "Msisdn": "xxxxxxxxxx",
         "Merchant_Id": "xxxxxxxxxx",
