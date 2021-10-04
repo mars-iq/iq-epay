@@ -143,6 +143,7 @@ Example Check Procces Success(APS,QiCard)
 ---------
 ```php
    $orderId = "xxxxxxxxxxxxxxxxxxxx";
+   $transiction_id = "xxxxxxxxxxxxxxxxxxxx";
    $PayClass = new PayClass();
    $PayClass->method = getWays::aps;// or getWays::qi
    $res = $PayClass->checkOrder($orderId,$transiction_id); // return -1 not supported  or 'status'=> 1 succes or 'status'=> 2 error and response
@@ -151,6 +152,7 @@ Example Void Order (QiCard)
 ---------
 ```php
    $orderId = "xxxxxxxxxxxxxxxxxxxx";
+   $transiction_id = "xxxxxxxxxxxxxxxxxxxx";
    $PayClass = new PayClass();
    $PayClass->method = getWays::qi;
    $res = $PayClass->QiVoidOrder($orderId,$transiction_id); // return -1 not supported  or 'status'=> 1 succes or 'status'=> 2 error and response
