@@ -14,9 +14,6 @@ MarTeam/iq-epay:
 -----
 This peace of code was written using hackathon yanhad, and it is now under testing level
 
-Document:
------
-<a href="http://mohammedakeel.online/logos/marsteam.pdf" target="_blank">work documentation</a>
 
 USES:
 ----
@@ -34,10 +31,11 @@ To provide a particular package aiming to overcome the challenges of e-payment, 
 Payment Gates:
 ```bash
 1-APS (Validated)
-2-Amwal (Validated)
-3-ZainCash (Validated)
-4-Switch (Validated)
-5-Tasdid (Beta)
+2-Qi (Validated)
+3-Amwal (Validated)
+4-ZainCash (Validated)
+5-Switch (Validated)
+6-Tasdid (Beta)
 ```
 Solution:
 ------
