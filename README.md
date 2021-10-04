@@ -3,6 +3,7 @@
     <img src="https://mohammedakeel.online/logos/mars.png" width="75">
     <img src="https://mohammedakeel.online/logos/yanhad.png" width="75">
     <img src="https://mohammedakeel.online/logos/station.jpg" width="75">
+        <img src="https://mohammedakeel.online/logos/qi.png" width="75">
     <img src="https://mohammedakeel.online/logos/amwal.jpg" width="75">
     <img src="https://mohammedakeel.online/logos/zaincash.png" width="75">
     <img src="https://mohammedakeel.online/logos/aps.png" width="75">
