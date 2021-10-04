@@ -14,7 +14,7 @@ class AmwalClass extends MainClass
     $this->sessionTimeoutSecs = "5000";
     // call Grandpa's constructor
     parent::__construct("amwal");
-    $this->client = new Client(['base_uri' => $this->urlapi]);
+        $this->client = new Client(['base_uri' => $this->urlapi,'http_errors' => false]);
   }
 
   function getPay(float $amount, string $description, string $currency, string $returnUrl, string $failUrl, string $orderNum)
