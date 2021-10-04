@@ -1,6 +1,6 @@
 {
     "name": "mars-iq/iqpay",
-    "description": "Php Api for iraq e-payment 4 providoor aps,zaincash,amwal,switch in one class",
+    "description": "Php Api for iraq e-payment 4 providoor QiCard,aps,zaincash,amwal(PayTabs),switch in one class",
     "type": "library",
     "license": "proprietary",
     "authors": [{
